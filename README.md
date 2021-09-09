@@ -6,7 +6,7 @@ In alphabetical order:
 * Antonello Florio
 * Chiara Capocello
 * Francesco Emilio Di Fruscio
-* Francesco Di Nucci
+* Francesco Di Nucci (@f-dinucci)
 * Marco Rausa
 
 It is one of the [three joint winner projects.](https://www.facebook.com/NeaPolisInnovation/posts/2985577571657598)
