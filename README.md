@@ -1,5 +1,5 @@
 # NISCAPE - Escaping NISC 2021
-This project has been made during the [NeaPolis Innovation Summer Campus](https://www.neapolisinnovation.info) 2021 (in short, NISC 2021) by the Team 12 _"The Jailbreakers"_.
+This project was made during the [NeaPolis Innovation Summer Campus](https://www.neapolisinnovation.info) 2021 (in short, NISC 2021) by the Team 12 _"The Jailbreakers"_.
 
 In alphabetical order:
 * Alessandro De Vita
@@ -12,39 +12,37 @@ In alphabetical order:
 It is one of the [three joint winner projects.](https://www.facebook.com/NeaPolisInnovation/posts/2985577571657598)
 
 ## Description and gameplay
-The aim of the project is to create an "escape room" game based on questions relating to the Neapolis Innovation Summer Campus 2021. 
+The aim of the project is to create an "escape room" game based on questions regarding the Neapolis Innovation Summer Campus 2021 syllabus. 
 
 The game is divided into two rooms: 
-* in the first one, the user has to answer correctly to three questions to open the door and to access to the second room. 
-* In the second room the difficulty is increased. Indeed, the user has four seconds to answer to the questions. 
-To exit from the second room, and to win the game, the user has to answer correctly to two questions. 
+* In the first one, the user has to answer correctly to three questions to open the door and to access the second room. 
+* In the second room the difficulty level is increased: the user has to answer to the questions within 4 seconds. To exit from the second room, and so winning the game, the user has to answer correctly to two questions. 
 
-The user has three lives (displayed through LEDs) at the end of which he loses the game. 
-When an answer is wrong or time runs out, the user loses a life.
+The user has three lives (displayed through LEDs). If he loses them, he loses the game. The user loses one life when the answer is wrong or the time has ran out.
 
 ## Game implementation
 
-### Player board
-In short: _a board that is connected to a computer and is used to show questions and answer, to solve the escape room._ 
+### Player board (Master)
+In summary: _a board that is connected to a computer and is used to show questions and answer, to solve the escape room._ 
 
-The questions will be chosen randomly from a given set and they will be displayed on the PC (using COM ports) with all the possible answers.
+The questions will be chosen randomly from a given set and they will be displayed on the PC (using a virtual COM port) with all the possible answers.
  
-The letters of the answer (A, B, C, D) appear on the OLED display. 
+The letters indexing the answer (A, B, C, D) appear on the OLED display. 
 Pay attention, because the positions of the letters varies casually with each question. 
 The user will have to select the correct answer by using the joystick and he will receive a feedback on the OLED and the PC. 
 
 When in the second room, the elapsed time is displayed on OLED. 
-In particular, the user will see 4 symbols surrounding the letters, a symbol is eliminated every time a tick (by default, one second) passed. 
+In particular, the user will see 4 symbols surrounding the letters. A symbol disappears every time a tick (by default, one second) passes. 
 If the user fails to answer in 4 ticks the answer is considered wrong and a life is subtracted.
 
-### Room board
+### Slave board
 In short: _a board that manages room's doors._
 
-The opening of the doors is entrusted to an external board that simulates a power circuit. 
-The two boards (master and slave) communicate via IR LEDs.
+The opening of the doors is managed by an external board that simulates a power circuit. 
+The slave board is triggered in its functions through an IR pulse sent by the master via IR LEDs.
 
 
-## Diagrams
+## Block schemes
 
 <img src="./res/schema_blocchi_circuito.png" width="700">
 Boards overview
@@ -59,7 +57,7 @@ Room board threads
 ## BOM and toolchain
 
 ### Bill of materials
-* 2x Nucleo-64 STM32F401RE boards
+* 2x Nucleo-64 STM32F401RE boards, running the ChibiOS RTOS suite (https://www.chibios.org/)
 * 1x HW-504 Joystick Module
 * 1x OLED display I2C, 128x64 pixels, with ssd1306 controller
 * 1x couple IR LEDs TX/RX
@@ -69,11 +67,11 @@ Room board threads
 
 
 ### Toolchain
-The project has been made with [ChibiStudio 2020-04 (GCC 9.0) on Windows](https://osdn.net/projects/chibios/downloads/70767/ChibiStudio_Windows_2020-04.7z/) with  [Open JDK 16.0.1 for Windows](https://download.java.net/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_windows-x64_bin.zip).
+The project has been developed by [ChibiStudio 2020-04 (GCC 9.0) on Windows](https://osdn.net/projects/chibios/downloads/70767/ChibiStudio_Windows_2020-04.7z/) with  [Open JDK 16.0.1 for Windows](https://download.java.net/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_windows-x64_bin.zip).
 
 ## Schematics
 
-### Player board
+### Player board (Master)
 | PIN | Component |
 | --- | --- | 
 | D15/D14 | OLED |
@@ -82,7 +80,7 @@ The project has been made with [ChibiStudio 2020-04 (GCC 9.0) on Windows](https:
 | D4 | second life led |
 | D2 | third life led |
 
-### Room board
+### Slave board
 
 | PIN | Component |
 | --- | --- | 
