@@ -7,7 +7,7 @@ In alphabetical order:
 * Chiara Capocello
 * Francesco Emilio Di Fruscio
 * Francesco Di Nucci (@f-dinucci)
-* Marco Rausa
+* Marco Rausa (@MarcoRausa)
 
 It is one of the [three joint winner projects.](https://www.facebook.com/NeaPolisInnovation/posts/2985577571657598)
 
@@ -35,7 +35,7 @@ When in the second room, the elapsed time is displayed on OLED.
 In particular, the user will see 4 symbols surrounding the letters. A symbol disappears every time a tick (by default, one second) passes. 
 If the user fails to answer in 4 ticks the answer is considered wrong and a life is subtracted.
 
-### Slave board
+### Room board (Slave)
 In short: _a board that manages room's doors._
 
 The opening of the doors is managed by an external board that simulates a power circuit. 
@@ -43,15 +43,15 @@ The slave board is triggered in its functions through an IR pulse sent by the ma
 
 
 ## Block schemes
-
+### Boards overview
 <img src="./res/schema_blocchi_circuito.png" width="700">
-Boards overview
 
+### Player board threads
 <img src="./res/Player_threads.jpg" width="700">
-Player board threads
 
+### Room board threads
 <img src="./res/Room_threads.jpg" width="300">
-Room board threads
+
 
 
 ## BOM and toolchain
