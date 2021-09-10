@@ -2,7 +2,7 @@
 This project was made during the [NeaPolis Innovation Summer Campus](https://www.neapolisinnovation.info) 2021 (in short, NISC 2021) by the Team 12 _"The Jailbreakers"_.
 
 In alphabetical order:
-* Alessandro De Vita
+* Alessandro De Vita (@allexio2288)
 * Antonello Florio (@antonelloflorio)
 * Chiara Capocello
 * Francesco Emilio Di Fruscio
