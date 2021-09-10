@@ -3,7 +3,7 @@ This project has been made during the [NeaPolis Innovation Summer Campus](https:
 
 In alphabetical order:
 * Alessandro De Vita
-* Antonello Florio
+* Antonello Florio (@antonelloflorio)
 * Chiara Capocello
 * Francesco Emilio Di Fruscio
 * Francesco Di Nucci (@f-dinucci)
