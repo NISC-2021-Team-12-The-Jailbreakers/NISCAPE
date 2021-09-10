@@ -5,7 +5,7 @@ In alphabetical order:
 * Alessandro De Vita (@allexio2288)
 * Antonello Florio (@antonelloflorio)
 * Chiara Capocello
-* Francesco Emilio Di Fruscio (@fradifruscio)
+* Francesco Erminio Di Fruscio (@fradifruscio)
 * Francesco Di Nucci (@f-dinucci)
 * Marco Rausa (@MarcoRausa)
 
