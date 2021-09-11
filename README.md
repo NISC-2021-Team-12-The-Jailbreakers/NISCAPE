@@ -4,7 +4,7 @@ This project was made during the [NeaPolis Innovation Summer Campus](https://www
 In alphabetical order:
 * Alessandro De Vita (@allexio2288)
 * Antonello Florio (@antonelloflorio)
-* Chiara Capocello
+* Chiara Capocello (@Chiarettc)
 * Francesco Erminio Di Fruscio (@fradifruscio)
 * Francesco Di Nucci (@f-dinucci)
 * Marco Rausa (@MarcoRausa)
